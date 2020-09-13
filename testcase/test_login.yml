@@ -1,0 +1,10 @@
+config:
+    name: 登录-正向用例
+    variables: {}
+teststeps:
+-   name: 登录
+    api: api/login.yml
+    validate:
+        - eq: [headers.Content-Type, application/json;charset=utf-8]
+
+

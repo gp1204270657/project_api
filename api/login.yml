@@ -1,0 +1,26 @@
+name: 登录-正向用例
+base_url: https://api.zhaogang.com
+variables:
+    expected_status_code: 200
+request:
+    url: /web.api
+    method: POST
+    headers:
+        Content-Type: application/x-www-form-urlencoded
+    data:
+        _sm: md5
+        _ft: json
+        _ts: '1599905139927'
+        mobile: '13636561554'
+        password: 026c93e7583e5fe03a02c362c05f7a2061e6c6cb
+        _aid: '500'
+        _tk: ''
+        _uid: ''
+        _tenantid: '304'
+        _domid: '2000'
+        _mt: user.wapLogin
+        _sig: d04f347b88bbd577ca969ed5d06c93b7
+
+validate:
+    - eq: ["status_code", $expected_status_code]
+    - eq: [content.stat.stateList.0.msg, 'SUCCESS']

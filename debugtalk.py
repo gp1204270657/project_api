@@ -1,12 +1,14 @@
 import hashlib
 import random
+import time
 
 #获取协议金额
 def getAmount():
     amount=random.randint(20000,60000)
     return amount
 
-
+def timesleep():
+    time.sleep(1)
 
 
 def jiamimd5(src):
@@ -17,21 +19,20 @@ def jiamimd5(src):
 def generate_sig(request):
     offset='0ce37dd6b927730161a1e559c2336d0a'
     s = ''
-    print(request)
+
     res = sorted(request["params"].items(), key=lambda item: item[0])
-    print(res)
+
     for i in range(0,len(res)):
-        print(res[i][0])
-        print(res[i][1])
+
         s = s + str(res[i][0])+'='+str(res[i][1])
 
     # for k,v in request["params"].items():
     #     print(k,v)
     #     s = s + k+'='+v
     s = s+offset
-    print(s)
+
     _sig = jiamimd5(s)
-    print('_sig---------'+_sig)
+
     request["params"]['_sig'] = _sig
-    print(request)
+
     return request

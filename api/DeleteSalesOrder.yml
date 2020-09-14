@@ -1,0 +1,32 @@
+name: 销售-删除销售订单
+base_url: https://api.zhaogang.com
+
+variables:
+    OrderId: 1
+    expected_status_code: 200
+    token: FMRY17%2FdFKVpc9ba2hhy6vKDTncSCQiWmUEgL4OCua7udTyRcUKECBuX25c1sp7mRGY8SjmnIfHMtnimmr4g2AGPZlqFQpi1quvCnsxOF6meQfGRWsipyX%2BSzhZiq0J7el51vzr%2B11Nin3ZBE5teygZKqZJZn4cxCmI7NUBq0As%3D
+request:
+    verify: False
+    url: /web.api
+    method: POST
+    params:
+        _sm: md5
+        _ft: json
+        _ts: 1600085998439
+        salesOrderId: '{"ids":[$OrderId]}'
+        _aid: 500
+        _tk: FMRY17%2FdFKVpc9ba2hhy6vKDTncSCQiWmUEgL4OCua7udTyRcUKECBuX25c1sp7mRGY8SjmnIfHMtnimmr4g2AGPZlqFQpi1quvCnsxOF6meQfGRWsipyX%2BSzhZiq0J7el51vzr%2B11Nin3ZBE5teygZKqZJZn4cxCmI7NUBq0As%3D
+        _uid: 800024257
+        _tenantid: 304
+        _domid: 2000
+        _mt: saasmanager.service.batchDeleteSalesOrder
+
+
+
+
+setup_hooks:
+    - ${generate_sig($request)}
+
+validate:
+    - eq: ["status_code", $expected_status_code]
+    - eq: [content.stat.stateList.0.msg, 'SUCCESS']

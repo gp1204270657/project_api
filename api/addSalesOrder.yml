@@ -23,6 +23,9 @@ request:
 setup_hooks:
     - ${generate_sig($request)}
 
+tearDown_hooks:
+    - ${timesleep()}
+
 
 validate:
     - eq: ["status_code", $expected_status_code]

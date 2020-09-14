@@ -1,0 +1,14 @@
+config:
+    name: 销售-新增销售订单
+    variables: {}
+
+teststeps:
+
+-   name: 销售-新增销售订单
+    api: api/addSalesOrder.yml
+    extract:
+        - saleOrderId: content.content.0.saleOrderId
+
+
+
+

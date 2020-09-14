@@ -1,0 +1,31 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /web.api
+    request:
+        data:
+            _aid: '500'
+            _domid: '2000'
+            _ft: json
+            _mt: saasmanager.service.saveSalesOrder
+            _sig: 3c975e95a8a672d68cb3dd21c47fcc07
+            _sm: md5
+            _tenantid: '304'
+            _tk: FMRY17%2FdFKVpc9ba2hhy6vKDTncSCQiWmUEgL4OCua7udTyRcUKECBuX25c1sp7mRGY8SjmnIfHMtnimmr4g2AGPZlqFQpi1quvCnsxOF6meQfGRWsipyX%2BSzhZiq0J7el51vzr%2B11Nin3ZBE5teygZKqZJZn4cxCmI7NUBq0As%3D
+            _ts: '1600073920448'
+            _uid: '800024257'
+            salesOrderParam: '{"salesOrderInfo":{"ourCompanyId":8,"ourCompanyName":"萨达哈喽的本方公司","targetCompanyId":10,"targetCompanyName":"神乐的往来公司","salesDate":"2020-09-14T08:47:56.107Z","agreementNo":"","businessMode":2,"settlementMode":1,"settlementStatus":0,"settlementId":0,"deliveryType":1,"latestDeliveryDate":"","generatorType":0,"outOrderNo":"","salesMan":"高鹏","generatorPicMsg":"","remark":"","agreementId":"","exclusiveTax":false,"noUseInvoice":false},"paymentInfo":{"expectedReceiveDate":"","receiveMethodId":"","receiveMethodName":"","shouldPayment":13200,"toReceiveAmount":"","receiveAmount":"","receiveStatus":""},"type":1,"listSalesOrderItemDetail":[{"valuationUnit":"吨","valuationUnitValue":1,"placeOrigin":"北京","specification":"111","fillingType":"理计","updateTime":"2020-09-10 22:12:34","quantityUnitValue":0,"taxRate":0.13,"subGoodsType":1,"goodsCategoryId":10741,"material":"123","goodsCategoryName":"普板","name":"普板","fillingTypeValue":2,"singleWeight":10000,"status":1,"weightUnitValue":0,"itemId":1517503,"inventoryId":"","itemTitle":"普板","steelMill":"北京","buyNum":"11","buyWeight":110000,"inclusiveTaxUnitPrice":1200,"costAmount":0,"salesOrderDetailCosts":[],"inclusiveTaxBuyPrice":1200,"realInclusiveTaxBuyPrice":1200,"inclusiveTaxBuyAmount":13200,"realInclusiveTaxBuyAmount":13200,"warehouseName":"胖仓库1","warehouseId":1744,"packageNo":"","purchaseAgreementNo":"","purchaseAgreementId":"","supplierName":"神乐的往来公司","supplierId":10,"inclusiveTaxPrice":100,"inclusiveTaxAmount":1100,"inclusiveTax":true,"realInclusiveTaxAmount":1100,"actualQuantity":"","weightActual":"","itemUnitWay":2,"weightUnit":"","eclusiveTaxBuyAmount":11681,"batchNo":"","settlementNum":"","settlementWeight":"","settlementPrice":"","settlementAmount":"","settlementInclusiveTaxAmount":"","remark":"","$$new":true,"$$goodsType":1,"categoryId":10741,"id":"","indefiniteSpec":false}]}'
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+                like Gecko) Chrome/70.0.3538.102 Safari/537.36
+        method: POST
+        url: https://api.zhaogang.com/web.api
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - application/json;charset=utf-8

@@ -1,4 +1,12 @@
 import hashlib
+import random
+
+#获取协议金额
+def getAmount():
+    amount=random.randint(20000,60000)
+    return amount
+
+
 
 
 def jiamimd5(src):
@@ -15,7 +23,7 @@ def generate_sig(request):
     for i in range(0,len(res)):
         print(res[i][0])
         print(res[i][1])
-        s = s + res[i][0]+'='+res[i][1]
+        s = s + str(res[i][0])+'='+str(res[i][1])
 
     # for k,v in request["params"].items():
     #     print(k,v)

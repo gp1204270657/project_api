@@ -1,0 +1,29 @@
+name: 销售-新增销售协议
+base_url: https://api.zhaogang.com
+verify: False
+
+variables:
+    expected_status_code: 200
+    token: FMRY17%2FdFKVpc9ba2hhy6vKDTncSCQiWmUEgL4OCua7udTyRcUKECBuX25c1sp7mRGY8SjmnIfHMtnimmr4g2AGPZlqFQpi1quvCnsxOF6meQfGRWsipyX%2BSzhZiq0J7el51vzr%2B11Nin3ZBE5teygZKqZJZn4cxCmI7NUBq0As%3D
+request:
+    url: /web.api
+    method: POST
+    params:
+        _sm: md5
+        _ft: json
+        _ts: 1600076456368
+        salesOrderParam: '{"salesOrderInfo":{"ourCompanyId":8,"ourCompanyName":"萨达哈喽的本方公司","targetCompanyId":10,"targetCompanyName":"神乐的往来公司","salesDate":"2020-09-14T09:38:43.661Z","agreementNo":"","businessMode":2,"settlementMode":1,"settlementStatus":0,"settlementId":0,"deliveryType":1,"latestDeliveryDate":"","generatorType":0,"outOrderNo":"","salesMan":"雪春","generatorPicMsg":"","remark":"","agreementId":"","exclusiveTax":false,"noUseInvoice":false},"paymentInfo":{"expectedReceiveDate":"","receiveMethodId":"","receiveMethodName":"","shouldPayment":1760,"toReceiveAmount":"","receiveAmount":"","receiveStatus":""},"type":1,"listSalesOrderItemDetail":[{"valuationUnit":"吨","valuationUnitValue":1,"placeOrigin":"安钢哈哈哈","specification":"5.75*1500*2000","fillingType":"过磅","quantityUnit":"件","updateTime":"2020-09-10 21:29:00","quantityUnitValue":2,"taxRate":0.13,"subGoodsType":1,"goodsCategoryId":10787,"material":"HRB4000","goodsCategoryName":"弹簧钢","name":"弹簧钢","fillingTypeValue":1,"mnemonicCode":"DHG","createdName":"黄辉","singleWeight":110000,"status":1,"weightUnit":1,"weightUnitValue":1,"itemId":1517401,"inventoryId":"","itemTitle":"弹簧钢","steelMill":"安钢哈哈哈","buyNum":"1","buyWeight":110000,"inclusiveTaxUnitPrice":160,"costAmount":0,"salesOrderDetailCosts":[],"inclusiveTaxBuyPrice":160,"realInclusiveTaxBuyPrice":160,"inclusiveTaxBuyAmount":1760,"realInclusiveTaxBuyAmount":1760,"warehouseName":"胖仓库1","warehouseId":1744,"packageNo":"","purchaseAgreementNo":"","purchaseAgreementId":"","supplierName":"神乐的往来公司","supplierId":10,"inclusiveTaxPrice":100,"inclusiveTaxAmount":1100,"inclusiveTax":true,"realInclusiveTaxAmount":1100,"actualQuantity":"","weightActual":"","itemUnitWay":1,"eclusiveTaxBuyAmount":1558,"batchNo":"","settlementNum":"","settlementWeight":"","settlementPrice":"","settlementAmount":"","settlementInclusiveTaxAmount":"","remark":"","$$new":true,"$$goodsType":1,"categoryId":10787,"id":"","indefiniteSpec":false}]}'
+        _aid: 500
+        _tk: FMRY17%2FdFKVpc9ba2hhy6vKDTncSCQiWmUEgL4OCua7udTyRcUKECBuX25c1sp7mRGY8SjmnIfHMtnimmr4g2AGPZlqFQpi1quvCnsxOF6meQfGRWsipyX%2BSzhZiq0J7el51vzr%2B11Nin3ZBE5teygZKqZJZn4cxCmI7NUBq0As%3D
+        _uid: 800024257
+        _tenantid: 304
+        _domid: 2000
+        _mt: saasmanager.service.saveSalesOrder
+
+setup_hooks:
+    - ${generate_sig($request)}
+
+
+validate:
+    - eq: ["status_code", $expected_status_code]
+    - eq: [content.stat.stateList.0.msg, 'SUCCESS']

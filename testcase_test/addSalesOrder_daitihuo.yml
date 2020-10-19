@@ -1,0 +1,28 @@
+config:
+    name: 销售-修改待开提单销售订单
+    variables: {}
+
+teststeps:
+
+-   name: 销售-新增待开销售订单
+    api: api_test/addSalesOrder_daikai.yml
+    extract:
+        - saleOrderId: content.content.0.saleOrderId
+        - salesOrderNo: content.content.0.salesOrderNo
+
+-   name: 销售-新增通知提货单查询id
+    variables:
+        - saleOrderId: $saleOrderId
+    api: api_test/addSalesOrder_tongzhitihuo.yml
+    extract:
+        - orderItemDetailId: content.content.0.data.0.deliveryDtos.0.id
+
+
+-   name: 销售-订单待提货
+    variables:
+        - orderItemDetailId: $orderItemDetailId
+        - salesOrderNo: $salesOrderNo
+    api: api_test/addSalesOrder_daitihuo.yml
+
+
+

@@ -4,7 +4,7 @@ config:
 teststeps:
 
 -   name: 销售-新增销售协议-正向用例
-    api: api/addSalesAgreement.yml
+    api: api_prod/addSalesAgreement.yml
 
 
 

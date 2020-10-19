@@ -1,5 +1,5 @@
 name: 销售-删除销售订单
-base_url: https://api.zhaogang.com
+base_url: https://api_prod.zhaogang.com
 
 variables:
     OrderId: 1
@@ -7,7 +7,7 @@ variables:
     token: FMRY17%2FdFKVpc9ba2hhy6vKDTncSCQiWmUEgL4OCua7udTyRcUKECBuX25c1sp7mRGY8SjmnIfHMtnimmr4g2AGPZlqFQpi1quvCnsxOF6meQfGRWsipyX%2BSzhZiq0J7el51vzr%2B11Nin3ZBE5teygZKqZJZn4cxCmI7NUBq0As%3D
 request:
     verify: False
-    url: /web.api
+    url: /web.api_prod
     method: POST
     params:
         _sm: md5

@@ -1,0 +1,59 @@
+name: 销售-新增销售协议
+base_url: https://api_prod.zhaoganguat.com
+
+variables:
+    expected_status_code: 200
+    token: FMRY17%2FdFKU0sEXq9bTAUlsKjk7hV3OJVU4J3TmzA7AEo1foDJCDXfXXLBTWMkCiT%2FC5y1S8bzEsBoiiEiNShheLJisHZH5zNKVTAG20iB83tSJMtbqQ%2Bz0jvWiKjWY5Wu%2FNpIAC4K8Dz2HhLVn%2BW1jwKTDH0UaB
+request:
+    verify: False
+    url: /web.api_prod
+    method: POST
+    params:
+        _sm: md5
+        _ft: json
+        _ts: 1600917360789
+        salesOrderParam: '{"salesOrderInfo":{"ourCompanyId":242,"ourCompanyName":"蚂蚁森林","targetCompanyId":10104,
+        "targetCompanyName":"云杉造纸公司","salesDate":"2020-09-25T05:38:13.151Z","agreementNo":"","businessMode":2,
+        "settlementMode":1,"settlementStatus":0,"settlementId":0,"deliveryType":1,"latestDeliveryDate":"",
+        "generatorType":0,"outOrderNo":"","salesMan":"小白板","generatorPicMsg":"","remark":"","agreementId":"",
+        "exclusiveTax":false,"noUseInvoice":false,"agencyPersonnelId":"","agencyPersonnel":"","contractArchiveStatus
+        ":1},"paymentInfo":{"expectedReceiveDate":"","receiveMethodId":"","receiveMethodName":"","shouldPayment":2000,
+        "toReceiveAmount":"","receiveAmount":"","receiveStatus":""},"type":1,"listSalesOrderItemDetail":
+        [{"valuationUnit":"吨","valuationUnitValue":1,"placeOrigin":"申特","specification":"10","fillingType":"过磅",
+        "quantityUnit":"件","updateTime":"2020-08-22 16:34:00","quantityUnitValue":2,"taxRate":0.13,"subGoodsType":1,
+        "goodsCategoryId":101430,"material":"HRB400","goodsCategoryName":"三级盘螺","name":"三级盘螺","fillingTypeValue"
+        :1,"mnemonicCode":"SJPL","createdName":"小白板","status":1,"weightUnitValue":0,"itemId":637696,"inventoryId":"",
+        "itemTitle":"三级盘螺","steelMill":"申特","singleWeight":10000,
+        "buyNum":"10",
+        "buyWeight":800000,
+        "inclusiveTaxUnitPrice":200,
+        "costAmount":0,"salesOrderDetailCosts":[],
+        "inclusiveTaxBuyPrice":200,
+        "realInclusiveTaxBuyPrice":200,
+        "inclusiveTaxBuyAmount":2000,"realInclusiveTaxBuyAmount":2000,
+        "warehouseName":"蚂蚁森林仓库","warehouseId":2540,"packageNo":"","purchaseAgreementNo":"",
+        "purchaseAgreementId":"","supplierName":"云杉造纸公司","supplierId":10104,"inclusiveTaxPrice":100,
+        "inclusiveTaxAmount":1000,"inclusiveTax":true,"realInclusiveTaxAmount":1000,"actualQuantity":"",
+        "weightActual":"","itemUnitWay":1,"weightUnit":"","eclusiveTaxBuyAmount":1770,"batchNo":"",
+        "settlementNum":"","settlementWeight":"","settlementPrice":"","settlementAmount":"",
+        "settlementInclusiveTaxAmount":"","remark":"","$$new":true,"$$goodsType":1,"categoryId":101430,"id":"",
+        "indefiniteSpec":false}]}'
+
+        _aid: 500
+        _tk: FMRY17%2FdFKW9zYUa39Xr6rEMGvGXKeYC9vnMK%2FiwtnHcCinaZdFyRwUkODlgHsTuVR3GhuoxED3%2FzBnrEFj4qy%2FX06je891zpT7auEbSeERe%2BRmjDTw%2B4GER7R80yYgVb5G%2Baz4GoIS4jUQm%2B%2FxN6qXT6ljv44RC
+        _uid: 800003319
+        _tenantid: 320016108
+        _domid: 2000
+        _mt: saasmanager.service.saveSalesOrder
+
+setup_hooks:
+    - ${generate_sig($request)}
+
+tearDown_hooks:
+    - ${timesleep()}
+
+
+validate:
+    - eq: ["status_code", $expected_status_code]
+    - eq: [content.stat.stateList.0.msg, 'SUCCESS']
+

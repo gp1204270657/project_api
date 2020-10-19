@@ -5,14 +5,14 @@ config:
 teststeps:
 
 -   name: 销售-新增销售订单
-    api: api/addSalesOrder.yml
+    api: api_prod/addSalesOrder_daikai.yml
     extract:
         - saleOrderId: content.content.0.saleOrderId
 
 -   name: 销售-删除销售订单
     variables:
         - OrderId: $saleOrderId
-    api: api/DeleteSalesOrder.yml
+    api: api_prod/DeleteSalesOrder.yml
 
 
 

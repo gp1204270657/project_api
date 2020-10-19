@@ -1,0 +1,12 @@
+config:
+    name: 销售-新增待开销售订单
+    variables: {}
+
+teststeps:
+
+-   name: 销售-新增待开销售订单
+    api: api_test/addSalesOrder_daikai.yml
+    extract:
+        - saleOrderId: content.content.0.saleOrderId
+        - salesOrderNo: content.content.0.salesOrderNo
+

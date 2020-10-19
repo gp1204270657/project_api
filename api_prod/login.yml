@@ -1,9 +1,9 @@
 name: 登录-正向用例
-base_url: https://api.zhaogang.com
+base_url: https://api_prod.zhaogang.com
 variables:
     expected_status_code: 200
 request:
-    url: /web.api
+    url: /web.api_prod
     method: POST
     headers:
         Content-Type: application/x-www-form-urlencoded

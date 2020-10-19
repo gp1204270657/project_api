@@ -3,7 +3,7 @@ config:
     variables: {}
 teststeps:
 -   name: 登录
-    api: api/login.yml
+    api: api_prod/login.yml
     validate:
         - eq: [headers.Content-Type, application/json;charset=utf-8]
 

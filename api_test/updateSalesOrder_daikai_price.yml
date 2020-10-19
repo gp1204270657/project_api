@@ -1,0 +1,86 @@
+name: 销售-修改待开提单销售订单货物单价
+base_url: https://api.zhaogangtest.com
+
+variables:
+    saleOrderId: 1
+    salesOrderNo: 1
+    expected_status_code: 200
+    token: FMRY17%2FdFKWM%2BLfNxoYSTcFw85CEqbbK5CrTEkoxVrToV4iePFhrSm84Jtg8gpigZaO82%2Bzs4UwxjATZKpvRl263uuuDhMaCNVi%2FKly%2FzUEp%2FPXczr6F1KT%2BTmlAEu2e%2B1pavBu5UIouboWSQmkH8k8rh9QfSZ6B
+request:
+    verify: False
+    url: /web.api
+    method: POST
+    params:
+        _sm: md5
+        _ft: json
+        _ts: 1602814572265
+        salesOrderParam: '{"salesOrderInfo":{"salesManMobile":"13636561554",
+        "gmtCreated":1602816903000,"receiveStatus":1,"settlementMode":1,"targetCompanyAccount":"622484231153231",
+        "contractArchiveStatus":1,
+        "id":$saleOrderId,
+        "operatorId":800008501,"salesOrderFileKey":
+        "f_r-d-520ac4be446d45c3a8f5b06b1013fac5.pdf","backToBack":1,"salesDate":1602777600000,
+        "version":1,
+        "generatorType":0,"targetCompanyName":"山杏往来公司","generatorPicMsg":"","receiveAmount":0,
+        "inclusiveTaxBuyAmount":16000,
+        "sourceOrderNo":"","settlementModeName":"一单一结","status":1,"purchaseAgreementNo":"",
+        "agencyPersonnel":"","gmtModified":1602817601000,"noUseInvoice":false,"hasInvoice":false,"remark":"",
+        "settlementId":0,"operatorName":"小白","targetSalesMan":"","receiveMethodName":"","settlementStatus":0,
+        "ourCompanyNameFax":"","salesMan":"麻花疼",
+        "salesOrderNo":"$salesOrderNo",
+        "businessMode":2,"approvalStatus":5,
+        "sealFileKey":"","targetCompanyId":20402,"deliveryType":1,"exclusiveTax":false,"outOrderNo":"","ourCompanyId":320,
+        "deleted":false,"sourceOrderType":"","agreementNo":"","tenantId":320004630,"ourCompanyName":"蚂蚁森林公司",
+        "latestDeliveryDate":"","dispatchCompanyId":"","agreementId":"","agencyPersonnelId":""},
+        "paymentInfo":{"receiveMethodName":"","shouldPayment":12000,"toReceiveAmount":12000,"receiveAmount":"",
+        "receiveStatus":1},"type":1,
+        "listSalesOrderItemDetail":[{
+        "salesOrderId":$saleOrderId,"
+        realInclusiveTaxBuyPrice":1000,
+        "inclusiveTax":true,
+        "toDispatchWeight":"120000.00",
+        "inclusiveTaxBuyPrice":1100,"steelMill":"鸿泰",
+        "toDispatchQuantity":1,"purchasedQuantity":0,"id":76502,"realInclusiveTaxPrice":100,"itemUnitWay":2,"batchNo":"",
+        "costAmount":0,"realDifferenceWeight":"",
+        "version":1,
+        "availableRefuseQuantity":0,"settlementWeight":"",
+        "itemId":568342,"taxRate":0.13,"warehouseId":1371,"inclusiveTaxBuyAmount":13200,"purchaseStatus":0,
+        "buyWeight":120000,
+        "settlementInclusiveTaxAmount":0,"refuseQuantity":0,"purchaseAgreementNo":"",
+        "purchaseHasSettlement":false,"buyNum":1,"supplierId":20402,"itemTitle":"三级螺纹钢","purchaseId":76101,
+        "remark":"","settlementId":0,"warehouseName":"西部森林开发仓库","packageNo":"",
+        "inclusiveTaxAmount":1200,
+
+        "settlementStatus":0,
+        "singleWeight":120000,
+        "salesOrderNo":"$salesOrderNo",
+        "supplierName":"山杏往来公司",
+        "indefiniteSpec":false,
+        "realInclusiveTaxAmount":1600,
+        "delivery":false,"eclusiveTaxBuyAmount":12389,
+        "inclusiveTaxUnitPrice":1100,
+        "toPurchaseQuantity":0,"specification":"14*12","salesOrderDetailCosts":[],
+        "purchaseAgreementId":0,"isDelivery":false,"deleted":false,"material":"HRB400","inclusiveTaxPrice":100,
+        "inventoryId":0,"weightActual":"",
+        "realInclusiveTaxBuyAmount":12000,
+        "actualQuantity":"","weightUnit":"",
+        "settlementNum":"","settlementPrice":"","settlementAmount":"","$$new":false,"$$goodsType":1}]}'
+
+        _aid: 500
+        _tk: $token
+        _uid: 800008501
+        _tenantid: 320004630
+        _domid: 2000
+        _mt: saasmanager.service.saveSalesOrder
+
+setup_hooks:
+    - ${generate_sig($request)}
+
+tearDown_hooks:
+    - ${timesleep()}
+
+
+validate:
+    - eq: ["status_code", $expected_status_code]
+    - eq: [content.stat.stateList.0.msg, 'SUCCESS']
+

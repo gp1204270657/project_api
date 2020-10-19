@@ -1,5 +1,6 @@
 import hashlib
 import random
+import datetime
 import time
 
 #获取协议金额
@@ -10,6 +11,10 @@ def getAmount():
 def timesleep():
     time.sleep(1)
 
+#获取系统当前的时间
+def getDate():
+    date2=datetime.date.today()
+    return date2
 
 def jiamimd5(src):
     m = hashlib.md5()
@@ -36,3 +41,5 @@ def generate_sig(request):
     request["params"]['_sig'] = _sig
 
     return request
+if __name__ == '__main__':
+    getDate()

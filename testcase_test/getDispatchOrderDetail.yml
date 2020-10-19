@@ -1,0 +1,41 @@
+config:
+    name: 销售-修改待开提单销售订单
+    variables: {}
+
+teststeps:
+
+-   name: 销售-新增待开销售订单
+    api: api_test/addSalesOrder_daikai.yml
+    extract:
+        - saleOrderId: content.content.0.saleOrderId
+        - salesOrderNo: content.content.0.salesOrderNo
+
+-   name: 销售-订单待提货
+    variables:
+        - saleOrderId: $saleOrderId
+        - salesOrderNo: $salesOrderNo
+    api: api_test/addSalesOrder_daitihuo.yml
+
+
+
+-   name: 销售-根据订单查询待提货单列表的id
+    variables:
+        - salesOrderNo: $salesOrderNo
+    api: api_test/salesDispatchOrderPageQuery.yml
+    extract:
+        - id: content.content.0.salesDispatchOrderVOList.0.id
+
+
+-   name: 销售-根据id查询待发货单的信息
+    variables:
+        - id: $id
+    api: api_test/getDispatchOrderDetail.yml
+    extract:
+        - dispatchId: content.content.0.goodsInfoList.0.dispatchId
+        - dispatchNo: content.content.0.goodsInfoList.0.dispatchNo
+        - id: content.content.0.goodsInfoList.0.id
+
+
+
+
+

@@ -1,0 +1,87 @@
+name: 销售-新增待开提单的销售订单
+base_url: https://api.zhaogangtest.com
+
+variables:
+    orderItemDetailId: 1
+    saleOrderId: 1
+    salesOrderNo: 1
+    dispatchId: 1
+    dispatchNo: 1
+    id: 1
+    expected_status_code: 200
+    token: FMRY17%2FdFKWM%2BLfNxoYSTcFw85CEqbbK5CrTEkoxVrToV4iePFhrSm84Jtg8gpigZaO82%2Bzs4UwxjATZKpvRl263uuuDhMaCNVi%2FKly%2FzUEp%2FPXczr6F1KT%2BTmlAEu2e%2B1pavBu5UIouboWSQmkH8k8rh9QfSZ6B
+request:
+    verify: False
+    url: /web.api
+    method: POST
+    params:
+        _sm: md5
+        _ft: json
+        _ts: 1602836872116
+        param: '{
+                	"salesDeliveryOrderInfo": {
+                		"ourCompanyId": 320,
+                		"warehouseId": 1371,
+                		"customerCompanyId": 20402,
+                		"salesOrderNo": "$salesOrderNo",
+                		"salesOrderId": $saleOrderId,
+                		"dispatchOrderNo": "$dispatchNo",
+                		"dispatchOrderId": $dispatchId,
+                		"sourceOrderNo": "",
+                		"sourceOrderType": 0,
+                		"customerCompanyName": "山杏往来公司",
+                		"warehouseName": "西部森林开发仓库",
+                		"ourCompanyName": "蚂蚁森林公司",
+                		"settlementStatus": 0,
+                		"businessMode": 2,
+                		"deliveryDate": "2020-10-20T02:26:32.300Z"
+                	},
+                	"listSalesDeliveryOrderItemDetail": [{
+                		"salesOrderId": $saleOrderId,
+                		"purchaseHasSettlement": false,
+                		"supplierId": 20402,
+                		"itemTitle": "三级螺纹钢",
+                		"steelMill": "鸿泰",
+                		"packageNo": "",
+                		"dispatchId": $dispatchId,
+                		"realDispatchNum": 1,
+                		"id": 0,
+                		"singleWeight": 120000,
+                		"orderItemDetailId": $orderItemDetailId,
+                		"supplierName": "山杏往来公司",
+                		"itemUnitWay": 2,
+                		"openWeight": 0,
+                		"dispatchNo": "$dispatchNo",
+                		"batchNo": "",
+                		"dispatchNum": 1,
+                		"openNum": 0,
+                		"specification": "14*12",
+                		"realDispatchWeight": 120000,
+                		"itemId": 568342,
+                		"taxRate": "0.1300",
+                		"material": "HRB400",
+                		"dispatchWeight": 120000,
+                		"weightUnit": 0,
+                		"dispatchOrderItemDetailId": $id,
+                		"itemBatchNo": 1
+                	}]
+                }'
+
+        _aid: 500
+        _tk: $token
+        _uid: 800008501
+        _tenantid: 320004630
+        _domid: 2000
+        _mt: saasmanager.service.saveSalesDeliveryOrder
+
+setup_hooks:
+    - ${generate_sig($request)}
+
+tearDown_hooks:
+    - ${timesleep()}
+
+
+validate:
+    - eq: ["status_code", $expected_status_code]
+    - eq: [content.stat.stateList.0.msg, 'SUCCESS']
+

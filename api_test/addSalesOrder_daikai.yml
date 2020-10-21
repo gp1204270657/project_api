@@ -3,7 +3,7 @@ base_url: https://api.zhaogangtest.com
 
 variables:
     expected_status_code: 200
-    token: FMRY17%2FdFKWM%2BLfNxoYSTcFw85CEqbbK5CrTEkoxVrToV4iePFhrSm84Jtg8gpigZaO82%2Bzs4UwxjATZKpvRl263uuuDhMaCNVi%2FKly%2FzUEp%2FPXczr6F1KT%2BTmlAEu2e%2B1pavBu5UIouboWSQmkH8k8rh9QfSZ6B
+    token: FMRY17%2FdFKURDJNTce%2Fmy98yideWTg1WCAd2Kv2rYxyA1OoizrQV%2FKvi6vJBMD2w%2BHC9VhbJvdXzA%2BTG6doPVaG1doF1WQAYpZzrq3orjV6eRgr%2BQUJiHgnk7lY6JCaP79VYHbYF%2B3eS8UQ7%2BDx003neQr0ALn51
 request:
     verify: False
     url: /web.api
@@ -12,34 +12,33 @@ request:
         _sm: md5
         _ft: json
         _ts: 1602814572265
-        salesOrderParam: '{"salesOrderInfo":{"ourCompanyId":320,"ourCompanyName":
-        "蚂蚁森林公司","targetCompanyId":20402,"targetCompanyName":"山杏往来公司",
+        salesOrderParam: '{"salesOrderInfo":{"ourCompanyId":320,"ourCompanyName":"蚂蚁森林公司",
+        "targetCompanyId":20402,"targetCompanyName":"山杏往来公司",
         "salesDate":"${getDate()}","agreementNo":"","businessMode":2,"settlementMode":1,
         "settlementStatus":0,"settlementId":0,"deliveryType":1,"latestDeliveryDate":"",
-        "generatorType":0,"outOrderNo":"","salesMan":"麻花疼","generatorPicMsg":"",
-        "dispatchCompanyId":"","remark":"","agreemen  tId":"","exclusiveTax":false,
+        "generatorType":0,"outOrderNo":"","salesMan":"麻花藤","generatorPicMsg":"",
+        "dispatchCompanyId":"","remark":"","agreementId":"","exclusiveTax":false,
         "noUseInvoice":false,"agencyPersonnelId":"","agencyPersonnel":"","contractArchiveStatus":1,
         "targetSalesMan":""},"paymentInfo":{"expectedReceiveDate":"","receiveMethodId":"",
-        "receiveMethodName":"","shouldPayment":12000,"toReceiveAmount":"",
-        "receiveAmount":"","receiveStatus":""},"type":1,
-        "listSalesOrderItemDetail":[{"valuationUnit":"吨","valuationUnitValue":1,
-        "placeOrigin":"鸿泰","specification":"14*12","fillingType":"理计","quantityUnit":"件",
-        "updateTime":"2020-08-18 10:31:57","quantityUnitValue":2,"taxRate":0.13,"subGoodsType":1,
-        "goodsCategoryId":103928,"material":"HRB400","goodsCategoryName":"三级螺纹钢",
-        "name":"三级螺纹钢","fillingTypeValue":2,"mnemonicCode":"SJLWG","createdName":"小白",
-        "status":1,"weightUnitValue":0,"itemId":568342,"inventoryId":"",
-        "itemTitle":"三级螺纹钢","steelMill":"鸿泰","singleWeight":120000,"buyNum":"1",
-        "buyWeight":120000,"inclusiveTaxUnitPrice":1000,"costAmount":0,
-        "salesOrderDetailCosts":[],"inclusiveTaxBuyPrice":1000,"realInclusiveTaxBuyPrice":1000,
-        "inclusiveTaxBuyAmount":12000,"realInclusiveTaxBuyAmount":12000,
-        "warehouseName":"西部森林开发仓库","warehouseId":1371,"packageNo":"",
-        "purchaseAgreementNo":"","purchaseAgreementId":"",
-        "supplierName":"山杏往来公司","supplierId":20402,"inclusiveTaxPrice":100,
-        "inclusiveTaxAmount":1200,"inclusiveTax":true,"realInclusiveTaxAmount":1200,
-        "actualQuantity":"","weightActual":"","itemUnitWay":2,"weightUnit":"",
+        "receiveMethodName":"","shouldPayment":12000,"toReceiveAmount":"","receiveAmount":"",
+        "receiveStatus":""},"type":1,"listSalesOrderItemDetail":[{"valuationUnit":1,
+        "updatedName":"小白","valuationUnitValue":1,"placeOrigin":"鸿泰","specification":"22*12",
+        "fillingType":"理计","quantityUnit":2,"updateTime":"2020-08-22 11:53:44",
+        "quantityUnitValue":2,"taxRate":0.13,"subGoodsType":1,"goodsCategoryId":103928,
+        "material":"HRB400","goodsCategoryName":"三级螺纹钢","name":"三级螺纹钢","fillingTypeValue":2,
+        "mnemonicCode":"SJLWG","createdName":"麻花藤","status":1,"weightUnit":1,"weightUnitValue":1,
+        "itemId":568338,"inventoryId":"","itemTitle":"三级螺纹钢","steelMill":"鸿泰",
+        "singleWeight":120000,"buyNum":"1","buyWeight":120000,"inclusiveTaxUnitPrice":1000,
+        "costAmount":0,"salesOrderDetailCosts":[],"inclusiveTaxBuyPrice":1000,
+        "realInclusiveTaxBuyPrice":1000,"inclusiveTaxBuyAmount":12000,
+        "realInclusiveTaxBuyAmount":12000,"warehouseName":"西部森林开发仓库","warehouseId":1371,
+        "packageNo":"","purchaseAgreementNo":"","purchaseAgreementId":"","supplierName":"山杏往来公司",
+        "supplierId":20402,"inclusiveTaxPrice":100,"inclusiveTaxAmount":1200,"inclusiveTax":true,
+        "realInclusiveTaxAmount":1200,"actualQuantity":"","weightActual":"","itemUnitWay":2,
         "eclusiveTaxBuyAmount":10619,"batchNo":"","settlementNum":"","settlementWeight":"",
         "settlementPrice":"","settlementAmount":"","settlementInclusiveTaxAmount":"","remark":"",
-        "$$new":true,"$$goodsType":1,"categoryId":103928,"id":"","indefiniteSpec":false}]}'
+        "$$identifyNotWeight":"","$$new":true,"$$goodsType":1,"categoryId":103928,"id":"",
+        "indefiniteSpec":false}]}'
 
         _aid: 500
         _tk: $token

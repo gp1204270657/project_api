@@ -1,9 +1,10 @@
 name: 销售-新增待开提单的销售订单
 base_url: https://api.zhaogangtest.com
 
+
 variables:
     expected_status_code: 200
-    token: FMRY17%2FdFKURDJNTce%2Fmy98yideWTg1WCAd2Kv2rYxyA1OoizrQV%2FKvi6vJBMD2w%2BHC9VhbJvdXzA%2BTG6doPVaG1doF1WQAYpZzrq3orjV6eRgr%2BQUJiHgnk7lY6JCaP79VYHbYF%2B3eS8UQ7%2BDx003neQr0ALn51
+    token: $token
 request:
     verify: False
     url: /web.api

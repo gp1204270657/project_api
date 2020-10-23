@@ -1,0 +1,11 @@
+config:
+    name: 登录
+    variables: {}
+
+teststeps:
+
+-   name: 登录
+    api: api_test/user_login.yml
+    extract:
+        - token: content.content.0.token
+

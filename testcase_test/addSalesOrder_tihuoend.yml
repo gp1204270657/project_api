@@ -4,39 +4,54 @@ config:
 
 teststeps:
 
+-   name: 登录
+    api: api_test/user_login.yml
+    extract:
+        - token: content.content.0.token
+
 -   name: 销售-新增待开销售订单
     api: api_test/addSalesOrder_daikai.yml
+    variables:
+        - token: $token
+
     extract:
         - saleOrderId: content.content.0.saleOrderId
         - salesOrderNo: content.content.0.salesOrderNo
 
 -   name: 销售-新增通知提货单查询id
-    variables:
-        - saleOrderId: $saleOrderId
     api: api_test/addSalesOrder_tongzhitihuo.yml
+    variables:
+        - token: $token
+        - saleOrderId: $saleOrderId
     extract:
         - orderItemDetailId: content.content.0.data.0.deliveryDtos.0.id
 
 
 -   name: 销售-订单待提货
+
+    api: api_test/addSalesOrder_daitihuo.yml
     variables:
+        - token: $token
         - orderItemDetailId: $orderItemDetailId
         - salesOrderNo: $salesOrderNo
-    api: api_test/addSalesOrder_daitihuo.yml
 
 
 -   name: 销售-根据订单查询待提货单列表的id
-    variables:
-        - salesOrderNo: $salesOrderNo
+
     api: api_test/salesDispatchOrderPageQuery.yml
+    variables:
+        - token: $token
+        - salesOrderNo: $salesOrderNo
     extract:
         - id: content.content.0.salesDispatchOrderVOList.0.id
 
 
 -   name: 销售-根据id查询待发货单的信息
-    variables:
-        - id: $id
+
     api: api_test/getDispatchOrderDetail.yml
+    variables:
+        - token: $token
+        - id: $id
     extract:
         - dispatchId: content.content.0.goodsInfoList.0.dispatchId
         - dispatchNo: content.content.0.goodsInfoList.0.dispatchNo
@@ -45,6 +60,7 @@ teststeps:
 
 -   name: 销售-新增生成提货完成的订单
     variables:
+        - token: $token
         - saleOrderId: $saleOrderId
         - salesOrderNo: $salesOrderNo
         - dispatchNo: $dispatchNo

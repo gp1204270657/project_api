@@ -9,7 +9,7 @@ variables:
   dispatchNo: 1
   id: 1
   expected_status_code: 200
-  token: FMRY17%2FdFKUaKabzGyNwNI8Cr5QBPgIweWLFIXFMZ4IsxobFhqm8sVpNI%2FgcUcf5DHTxgMcOpjh8bmxeWE0qtxZfacpwPMp2TPQL4TVUtku23wQpif6DM9HAwQ0MClAnw86f8SrFlhj8szl6ug6Hjic5tRJiEkFN
+  token: $token
 request:
   verify: False
   url: /web.api

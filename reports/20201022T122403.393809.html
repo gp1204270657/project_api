@@ -1,0 +1,1593 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2020-10-22T12:24:03.393809</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">4.816 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.5.7 </td>
+      <td>CPython 3.8.4 </td>
+      <td colspan="2">Windows-10-10.0.18362-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (0/1)</td>
+      <td colspan="2">6 (3/1/2/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>销售-修改待开提单销售订单</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 6</td>
+      <td>SUCCESS: 3</td>
+      <td>FAILED: 1</td>
+      <td>ERROR: 2</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">销售-新增待开销售订单</td>
+      <td style="text-align:center;width:6em;">304.82 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 销售-新增待开销售订单</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1602814572265&salesOrderParam=%7B%22salesOrderInfo%22%3A%7B%22ourCompanyId%22%3A320%2C%22ourCompanyName%22%3A%22%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E5%85%AC%E5%8F%B8%22%2C+%22targetCompanyId%22%3A20402%2C%22targetCompanyName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C+%22salesDate%22%3A%222020-10-22%22%2C%22agreementNo%22%3A%22%22%2C%22businessMode%22%3A2%2C%22settlementMode%22%3A1%2C+%22settlementStatus%22%3A0%2C%22settlementId%22%3A0%2C%22deliveryType%22%3A1%2C%22latestDeliveryDate%22%3A%22%22%2C+%22generatorType%22%3A0%2C%22outOrderNo%22%3A%22%22%2C%22salesMan%22%3A%22%E9%BA%BB%E8%8A%B1%E8%97%A4%22%2C%22generatorPicMsg%22%3A%22%22%2C+%22dispatchCompanyId%22%3A%22%22%2C%22remark%22%3A%22%22%2C%22agreementId%22%3A%22%22%2C%22exclusiveTax%22%3Afalse%2C+%22noUseInvoice%22%3Afalse%2C%22agencyPersonnelId%22%3A%22%22%2C%22agencyPersonnel%22%3A%22%22%2C%22contractArchiveStatus%22%3A1%2C+%22targetSalesMan%22%3A%22%22%7D%2C%22paymentInfo%22%3A%7B%22expectedReceiveDate%22%3A%22%22%2C%22receiveMethodId%22%3A%22%22%2C+%22receiveMethodName%22%3A%22%22%2C%22shouldPayment%22%3A12000%2C%22toReceiveAmount%22%3A%22%22%2C%22receiveAmount%22%3A%22%22%2C+%22receiveStatus%22%3A%22%22%7D%2C%22type%22%3A1%2C%22listSalesOrderItemDetail%22%3A%5B%7B%22valuationUnit%22%3A1%2C+%22updatedName%22%3A%22%E5%B0%8F%E7%99%BD%22%2C%22valuationUnitValue%22%3A1%2C%22placeOrigin%22%3A%22%E9%B8%BF%E6%B3%B0%22%2C%22specification%22%3A%2222%2A12%22%2C+%22fillingType%22%3A%22%E7%90%86%E8%AE%A1%22%2C%22quantityUnit%22%3A2%2C%22updateTime%22%3A%222020-08-22+11%3A53%3A44%22%2C+%22quantityUnitValue%22%3A2%2C%22taxRate%22%3A0.13%2C%22subGoodsType%22%3A1%2C%22goodsCategoryId%22%3A103928%2C+%22material%22%3A%22HRB400%22%2C%22goodsCategoryName%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22name%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22fillingTypeValue%22%3A2%2C+%22mnemonicCode%22%3A%22SJLWG%22%2C%22createdName%22%3A%22%E9%BA%BB%E8%8A%B1%E8%97%A4%22%2C%22status%22%3A1%2C%22weightUnit%22%3A1%2C%22weightUnitValue%22%3A1%2C+%22itemId%22%3A568338%2C%22inventoryId%22%3A%22%22%2C%22itemTitle%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22steelMill%22%3A%22%E9%B8%BF%E6%B3%B0%22%2C+%22singleWeight%22%3A120000%2C%22buyNum%22%3A%221%22%2C%22buyWeight%22%3A120000%2C%22inclusiveTaxUnitPrice%22%3A1000%2C+%22costAmount%22%3A0%2C%22salesOrderDetailCosts%22%3A%5B%5D%2C%22inclusiveTaxBuyPrice%22%3A1000%2C+%22realInclusiveTaxBuyPrice%22%3A1000%2C%22inclusiveTaxBuyAmount%22%3A12000%2C+%22realInclusiveTaxBuyAmount%22%3A12000%2C%22warehouseName%22%3A%22%E8%A5%BF%E9%83%A8%E6%A3%AE%E6%9E%97%E5%BC%80%E5%8F%91%E4%BB%93%E5%BA%93%22%2C%22warehouseId%22%3A1371%2C+%22packageNo%22%3A%22%22%2C%22purchaseAgreementNo%22%3A%22%22%2C%22purchaseAgreementId%22%3A%22%22%2C%22supplierName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C+%22supplierId%22%3A20402%2C%22inclusiveTaxPrice%22%3A100%2C%22inclusiveTaxAmount%22%3A1200%2C%22inclusiveTax%22%3Atrue%2C+%22realInclusiveTaxAmount%22%3A1200%2C%22actualQuantity%22%3A%22%22%2C%22weightActual%22%3A%22%22%2C%22itemUnitWay%22%3A2%2C+%22eclusiveTaxBuyAmount%22%3A10619%2C%22batchNo%22%3A%22%22%2C%22settlementNum%22%3A%22%22%2C%22settlementWeight%22%3A%22%22%2C+%22settlementPrice%22%3A%22%22%2C%22settlementAmount%22%3A%22%22%2C%22settlementInclusiveTaxAmount%22%3A%22%22%2C%22remark%22%3A%22%22%2C+%22%24identifyNotWeight%22%3A%22%22%2C%22%24new%22%3Atrue%2C%22%24goodsType%22%3A1%2C%22categoryId%22%3A103928%2C%22id%22%3A%22%22%2C+%22indefiniteSpec%22%3Afalse%7D%5D%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.saveSalesOrder&_sig=c494f0860f5218c0a04efc11784ac0a8
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{
+  &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+  &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+  &#34;Accept&#34;: &#34;*/*&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;,
+  &#34;Content-Length&#34;: &#34;0&#34;
+}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1602814572265&salesOrderParam=%7B%22salesOrderInfo%22%3A%7B%22ourCompanyId%22%3A320%2C%22ourCompanyName%22%3A%22%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E5%85%AC%E5%8F%B8%22%2C+%22targetCompanyId%22%3A20402%2C%22targetCompanyName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C+%22salesDate%22%3A%222020-10-22%22%2C%22agreementNo%22%3A%22%22%2C%22businessMode%22%3A2%2C%22settlementMode%22%3A1%2C+%22settlementStatus%22%3A0%2C%22settlementId%22%3A0%2C%22deliveryType%22%3A1%2C%22latestDeliveryDate%22%3A%22%22%2C+%22generatorType%22%3A0%2C%22outOrderNo%22%3A%22%22%2C%22salesMan%22%3A%22%E9%BA%BB%E8%8A%B1%E8%97%A4%22%2C%22generatorPicMsg%22%3A%22%22%2C+%22dispatchCompanyId%22%3A%22%22%2C%22remark%22%3A%22%22%2C%22agreementId%22%3A%22%22%2C%22exclusiveTax%22%3Afalse%2C+%22noUseInvoice%22%3Afalse%2C%22agencyPersonnelId%22%3A%22%22%2C%22agencyPersonnel%22%3A%22%22%2C%22contractArchiveStatus%22%3A1%2C+%22targetSalesMan%22%3A%22%22%7D%2C%22paymentInfo%22%3A%7B%22expectedReceiveDate%22%3A%22%22%2C%22receiveMethodId%22%3A%22%22%2C+%22receiveMethodName%22%3A%22%22%2C%22shouldPayment%22%3A12000%2C%22toReceiveAmount%22%3A%22%22%2C%22receiveAmount%22%3A%22%22%2C+%22receiveStatus%22%3A%22%22%7D%2C%22type%22%3A1%2C%22listSalesOrderItemDetail%22%3A%5B%7B%22valuationUnit%22%3A1%2C+%22updatedName%22%3A%22%E5%B0%8F%E7%99%BD%22%2C%22valuationUnitValue%22%3A1%2C%22placeOrigin%22%3A%22%E9%B8%BF%E6%B3%B0%22%2C%22specification%22%3A%2222%2A12%22%2C+%22fillingType%22%3A%22%E7%90%86%E8%AE%A1%22%2C%22quantityUnit%22%3A2%2C%22updateTime%22%3A%222020-08-22+11%3A53%3A44%22%2C+%22quantityUnitValue%22%3A2%2C%22taxRate%22%3A0.13%2C%22subGoodsType%22%3A1%2C%22goodsCategoryId%22%3A103928%2C+%22material%22%3A%22HRB400%22%2C%22goodsCategoryName%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22name%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22fillingTypeValue%22%3A2%2C+%22mnemonicCode%22%3A%22SJLWG%22%2C%22createdName%22%3A%22%E9%BA%BB%E8%8A%B1%E8%97%A4%22%2C%22status%22%3A1%2C%22weightUnit%22%3A1%2C%22weightUnitValue%22%3A1%2C+%22itemId%22%3A568338%2C%22inventoryId%22%3A%22%22%2C%22itemTitle%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22steelMill%22%3A%22%E9%B8%BF%E6%B3%B0%22%2C+%22singleWeight%22%3A120000%2C%22buyNum%22%3A%221%22%2C%22buyWeight%22%3A120000%2C%22inclusiveTaxUnitPrice%22%3A1000%2C+%22costAmount%22%3A0%2C%22salesOrderDetailCosts%22%3A%5B%5D%2C%22inclusiveTaxBuyPrice%22%3A1000%2C+%22realInclusiveTaxBuyPrice%22%3A1000%2C%22inclusiveTaxBuyAmount%22%3A12000%2C+%22realInclusiveTaxBuyAmount%22%3A12000%2C%22warehouseName%22%3A%22%E8%A5%BF%E9%83%A8%E6%A3%AE%E6%9E%97%E5%BC%80%E5%8F%91%E4%BB%93%E5%BA%93%22%2C%22warehouseId%22%3A1371%2C+%22packageNo%22%3A%22%22%2C%22purchaseAgreementNo%22%3A%22%22%2C%22purchaseAgreementId%22%3A%22%22%2C%22supplierName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C+%22supplierId%22%3A20402%2C%22inclusiveTaxPrice%22%3A100%2C%22inclusiveTaxAmount%22%3A1200%2C%22inclusiveTax%22%3Atrue%2C+%22realInclusiveTaxAmount%22%3A1200%2C%22actualQuantity%22%3A%22%22%2C%22weightActual%22%3A%22%22%2C%22itemUnitWay%22%3A2%2C+%22eclusiveTaxBuyAmount%22%3A10619%2C%22batchNo%22%3A%22%22%2C%22settlementNum%22%3A%22%22%2C%22settlementWeight%22%3A%22%22%2C+%22settlementPrice%22%3A%22%22%2C%22settlementAmount%22%3A%22%22%2C%22settlementInclusiveTaxAmount%22%3A%22%22%2C%22remark%22%3A%22%22%2C+%22%24identifyNotWeight%22%3A%22%22%2C%22%24new%22%3Atrue%2C%22%24goodsType%22%3A1%2C%22categoryId%22%3A103928%2C%22id%22%3A%22%22%2C+%22indefiniteSpec%22%3Afalse%7D%5D%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.saveSalesOrder&_sig=c494f0860f5218c0a04efc11784ac0a8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{
+  &#34;Server&#34;: &#34;nginx&#34;,
+  &#34;Date&#34;: &#34;Thu, 22 Oct 2020 12:24:04 GMT&#34;,
+  &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;,
+  &#34;Content-Length&#34;: &#34;612&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>body</th>
+                        <td>
+                          
+                            
+                              <pre>{
+  &#34;stat&#34;: {
+    &#34;_mt&#34;: &#34;saasmanager.service.saveSalesOrder&#34;,
+    &#34;_traceId&#34;: &#34;online.base.api.service-0a004c56-445380-3831&#34;,
+    &#34;cid&#34;: &#34;a:df39a7|t:194|s:1603369444042&#34;,
+    &#34;code&#34;: 0,
+    &#34;notificationList&#34;: [
+      {
+        &#34;key&#34;: &#34;output&#34;,
+        &#34;value&#34;: &#34;[312]&#34;
+      },
+      {
+        &#34;key&#34;: &#34;dubbo&#34;,
+        &#34;value&#34;: &#34;[2.0.2]&#34;
+      }
+    ],
+    &#34;session&#34;: &#34;849e102b-980b-4c57-8967-a7e8eda490c0&#34;,
+    &#34;stateList&#34;: [
+      {
+        &#34;code&#34;: 0,
+        &#34;defaultTip&#34;: &#34;成功&#34;,
+        &#34;length&#34;: 203,
+        &#34;msg&#34;: &#34;SUCCESS&#34;
+      }
+    ],
+    &#34;systime&#34;: 1603369444284
+  },
+  &#34;content&#34;: [
+    {
+      &#34;success&#34;: true,
+      &#34;salesOrderChangeUnitPriceItemList&#34;: [],
+      &#34;errorCode&#34;: 0,
+      &#34;saleOrderId&#34;: 71918,
+      &#34;message&#34;: &#34;保存成功,订单命中审批条件,进入审批中&#34;,
+      &#34;version&#34;: 1,
+      &#34;salesOrderNo&#34;: &#34;XSDD20201022000147&#34;
+    }
+  ]
+}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($expected_status_code)</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.stat.stateList.0.msg
+                      </td>
+                      <td>equals</td>
+                      <td>SUCCESS</td>
+                      <td>SUCCESS</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>612</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>304.82</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>300.544</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_2">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">销售-新增通知提货单查询id</td>
+      <td style="text-align:center;width:6em;">89.14 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_2_1">log-1</a>
+        <div id="popup_log_1_2_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 销售-新增通知提货单查询id</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1603080256426&salesOrderId=%7B%22salesOrderId%22%3A%2271918%22%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.getSalesOrderWarehouseItem&_sig=2ee2777aeecd871c1c15cb71623d93a5
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{
+  &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+  &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+  &#34;Accept&#34;: &#34;*/*&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1603080256426&salesOrderId=%7B%22salesOrderId%22%3A%2271918%22%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.getSalesOrderWarehouseItem&_sig=2ee2777aeecd871c1c15cb71623d93a5
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{
+  &#34;Server&#34;: &#34;nginx&#34;,
+  &#34;Date&#34;: &#34;Thu, 22 Oct 2020 12:24:05 GMT&#34;,
+  &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;,
+  &#34;Content-Length&#34;: &#34;1154&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>body</th>
+                        <td>
+                          
+                            
+                              <pre>{
+  &#34;stat&#34;: {
+    &#34;_mt&#34;: &#34;saasmanager.service.getSalesOrderWarehouseItem&#34;,
+    &#34;_traceId&#34;: &#34;online.base.api.service-0a004c56-445380-3834&#34;,
+    &#34;cid&#34;: &#34;a:df39a7|t:181|s:1603369445303&#34;,
+    &#34;code&#34;: 0,
+    &#34;notificationList&#34;: [
+      {
+        &#34;key&#34;: &#34;output&#34;,
+        &#34;value&#34;: &#34;[1054]&#34;
+      },
+      {
+        &#34;key&#34;: &#34;dubbo&#34;,
+        &#34;value&#34;: &#34;[2.0.2]&#34;
+      }
+    ],
+    &#34;session&#34;: &#34;6e92dd3a-0416-4f1d-a706-5a411132e9c2&#34;,
+    &#34;stateList&#34;: [
+      {
+        &#34;code&#34;: 0,
+        &#34;defaultTip&#34;: &#34;成功&#34;,
+        &#34;length&#34;: 732,
+        &#34;msg&#34;: &#34;SUCCESS&#34;
+      }
+    ],
+    &#34;systime&#34;: 1603369445387
+  },
+  &#34;content&#34;: [
+    {
+      &#34;data&#34;: [
+        {
+          &#34;warehouseId&#34;: 1371,
+          &#34;deliveryDtos&#34;: [
+            {
+              &#34;salesOrderId&#34;: 71918,
+              &#34;supplierId&#34;: 20402,
+              &#34;buyNum&#34;: 1,
+              &#34;itemTitle&#34;: &#34;三级螺纹钢&#34;,
+              &#34;applyWeight&#34;: &#34;120000.00&#34;,
+              &#34;purchaseId&#34;: 78114,
+              &#34;quantityUnit&#34;: 2,
+              &#34;steelMill&#34;: &#34;鸿泰&#34;,
+              &#34;warehouseName&#34;: &#34;西部森林开发仓库&#34;,
+              &#34;packageNo&#34;: &#34;&#34;,
+              &#34;actualQuantity&#34;: 0,
+              &#34;id&#34;: 78525,
+              &#34;singleWeight&#34;: &#34;120000.00&#34;,
+              &#34;notifySum&#34;: 0,
+              &#34;salesOrderNo&#34;: &#34;XSDD20201022000147&#34;,
+              &#34;itemUnitWay&#34;: 2,
+              &#34;valuationUnit&#34;: 1,
+              &#34;supplierName&#34;: &#34;山杏往来公司&#34;,
+              &#34;batchNo&#34;: &#34;&#34;,
+              &#34;specification&#34;: &#34;22*12&#34;,
+              &#34;applySum&#34;: 1,
+              &#34;itemId&#34;: 568338,
+              &#34;taxRate&#34;: &#34;0.1300&#34;,
+              &#34;material&#34;: &#34;HRB400&#34;,
+              &#34;warehouseId&#34;: 1371,
+              &#34;notifyWeight&#34;: &#34;0&#34;,
+              &#34;buyWeight&#34;: &#34;120000.00&#34;,
+              &#34;weightActual&#34;: &#34;&#34;,
+              &#34;weightUnit&#34;: 1
+            }
+          ],
+          &#34;warehouseName&#34;: &#34;西部森林开发仓库&#34;
+        }
+      ],
+      &#34;success&#34;: true,
+      &#34;message&#34;: &#34;查询成功&#34;
+    }
+  ]
+}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($expected_status_code)</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.stat.stateList.0.msg
+                      </td>
+                      <td>equals</td>
+                      <td>SUCCESS</td>
+                      <td>SUCCESS</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>1154</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>89.14</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>87.863</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_3">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">销售-订单待提货</td>
+      <td style="text-align:center;width:6em;">75.21 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_3_1">log-1</a>
+        <div id="popup_log_1_3_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_3_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 销售-订单待提货</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1602826989126&param=%7B%22ourCompanyId%22%3A320%2C%22customerCompanyId%22%3A20402%2C+%22salesOrderNo%22%3A%22XSDD20201022000147%22%2C+%22warehouseName%22%3A%22%E8%A5%BF%E9%83%A8%E6%A3%AE%E6%9E%97%E5%BC%80%E5%8F%91%E4%BB%93%E5%BA%93%22%2C%22businessMode%22%3A2%2C%22dispatchWay%22%3A2%2C+%22dispatchCompanyId%22%3A20402%2C%22dispatchNoticeDate%22%3A1603261773439%2C%22expiryDate%22%3A%22%22%2C+%22dispatchContent%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C%22warehouseId%22%3A1371%2C%22ourCompanyName%22%3A%22%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E5%85%AC%E5%8F%B8%22%2C+%22customerCompanyName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C%22salesOrderId%22%3A%2271918%22%2C%22backToBack%22%3A1%2C+%22salesDispatchOrderInfo%22%3A%5B%7B%22packageNo%22%3A%22%22%2C%22orderItemDetailId%22%3A78525%2C%22itemId%22%3A568338%2C+%22itemTitle%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22material%22%3A%22HRB400%22%2C%22specification%22%3A%2222%2A12%22%2C%22steelMill%22%3A%22%E9%B8%BF%E6%B3%B0%22%2C+%22supplierName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C%22itemUnitWay%22%3A2%2C%22batchNo%22%3A%22%22%2C%22singleWeight%22%3A120000%2C+%22taxRate%22%3A%220.1300%22%2C%22dispatchNum%22%3A1%2C%22dispatchWeight%22%3A120000%2C+%22weightUnit%22%3A1%2C%22quantityUnit%22%3A2%2C%22valuationUnit%22%3A1%2C%22supplierId%22%3A20402%2C+%22applySum%22%3A1%2C%22applyWeight%22%3A120000%7D%5D%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.insertDispatchOrder&_sig=3f54a40dbfae0b0fe4432e18e9790eab
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{
+  &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+  &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+  &#34;Accept&#34;: &#34;*/*&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;,
+  &#34;Content-Length&#34;: &#34;0&#34;
+}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1602826989126&param=%7B%22ourCompanyId%22%3A320%2C%22customerCompanyId%22%3A20402%2C+%22salesOrderNo%22%3A%22XSDD20201022000147%22%2C+%22warehouseName%22%3A%22%E8%A5%BF%E9%83%A8%E6%A3%AE%E6%9E%97%E5%BC%80%E5%8F%91%E4%BB%93%E5%BA%93%22%2C%22businessMode%22%3A2%2C%22dispatchWay%22%3A2%2C+%22dispatchCompanyId%22%3A20402%2C%22dispatchNoticeDate%22%3A1603261773439%2C%22expiryDate%22%3A%22%22%2C+%22dispatchContent%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C%22warehouseId%22%3A1371%2C%22ourCompanyName%22%3A%22%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97%E5%85%AC%E5%8F%B8%22%2C+%22customerCompanyName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C%22salesOrderId%22%3A%2271918%22%2C%22backToBack%22%3A1%2C+%22salesDispatchOrderInfo%22%3A%5B%7B%22packageNo%22%3A%22%22%2C%22orderItemDetailId%22%3A78525%2C%22itemId%22%3A568338%2C+%22itemTitle%22%3A%22%E4%B8%89%E7%BA%A7%E8%9E%BA%E7%BA%B9%E9%92%A2%22%2C%22material%22%3A%22HRB400%22%2C%22specification%22%3A%2222%2A12%22%2C%22steelMill%22%3A%22%E9%B8%BF%E6%B3%B0%22%2C+%22supplierName%22%3A%22%E5%B1%B1%E6%9D%8F%E5%BE%80%E6%9D%A5%E5%85%AC%E5%8F%B8%22%2C%22itemUnitWay%22%3A2%2C%22batchNo%22%3A%22%22%2C%22singleWeight%22%3A120000%2C+%22taxRate%22%3A%220.1300%22%2C%22dispatchNum%22%3A1%2C%22dispatchWeight%22%3A120000%2C+%22weightUnit%22%3A1%2C%22quantityUnit%22%3A2%2C%22valuationUnit%22%3A1%2C%22supplierId%22%3A20402%2C+%22applySum%22%3A1%2C%22applyWeight%22%3A120000%7D%5D%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.insertDispatchOrder&_sig=3f54a40dbfae0b0fe4432e18e9790eab
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{
+  &#34;Server&#34;: &#34;nginx&#34;,
+  &#34;Date&#34;: &#34;Thu, 22 Oct 2020 12:24:06 GMT&#34;,
+  &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;,
+  &#34;Content-Length&#34;: &#34;499&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>body</th>
+                        <td>
+                          
+                            
+                              <pre>{
+  &#34;stat&#34;: {
+    &#34;_mt&#34;: &#34;saasmanager.service.insertDispatchOrder&#34;,
+    &#34;_traceId&#34;: &#34;online.base.api.service-0a004c56-445380-3838&#34;,
+    &#34;cid&#34;: &#34;a:df39a7|t:122|s:1603369446404&#34;,
+    &#34;code&#34;: 0,
+    &#34;notificationList&#34;: [
+      {
+        &#34;key&#34;: &#34;output&#34;,
+        &#34;value&#34;: &#34;[202]&#34;
+      },
+      {
+        &#34;key&#34;: &#34;dubbo&#34;,
+        &#34;value&#34;: &#34;[2.0.2]&#34;
+      }
+    ],
+    &#34;session&#34;: &#34;c613ab0f-3efc-43a2-a4b6-44d82adde7cb&#34;,
+    &#34;stateList&#34;: [
+      {
+        &#34;code&#34;: 0,
+        &#34;defaultTip&#34;: &#34;成功&#34;,
+        &#34;length&#34;: 86,
+        &#34;msg&#34;: &#34;SUCCESS&#34;
+      }
+    ],
+    &#34;systime&#34;: 1603369446473
+  },
+  &#34;content&#34;: [
+    {
+      &#34;success&#34;: false,
+      &#34;id&#34;: 0,
+      &#34;message&#34;: &#34;销售单审批中,不允许新增提货通知单&#34;
+    }
+  ]
+}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($expected_status_code)</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.stat.stateList.0.msg
+                      </td>
+                      <td>equals</td>
+                      <td>SUCCESS</td>
+                      <td>SUCCESS</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>499</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>75.21</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>73.371</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_4">
+      <th class="failure" style="width:5em;">failure</th>
+      <td colspan="2">销售-根据订单查询待提货单列表的id</td>
+      <td style="text-align:center;width:6em;">253.40 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_4_1">log-1</a>
+        <div id="popup_log_1_4_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_4_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 销售-根据订单查询待提货单列表的id</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1602834101979&param=%7B%22salesOrderNo%22%3A%22XSDD20201022000147%22%2C+%22businessMode%22%3A0%2C%22pageNo%22%3A1%2C%22pageSize%22%3A10%2C+%22advancedOrderByParams%22%3A%5B%5D%2C%22status%22%3A%220%22%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.salesDispatchOrderPageQuery&_sig=27e27f9d83e20805cf446ac4d1c532ba
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{
+  &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+  &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+  &#34;Accept&#34;: &#34;*/*&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1602834101979&param=%7B%22salesOrderNo%22%3A%22XSDD20201022000147%22%2C+%22businessMode%22%3A0%2C%22pageNo%22%3A1%2C%22pageSize%22%3A10%2C+%22advancedOrderByParams%22%3A%5B%5D%2C%22status%22%3A%220%22%7D&_aid=500&_tk=FMRY17%252FdFKXBXuir0%252FAabjQk3%252BvNwj0vZgtMpry8eAgt0Lx8jmlvMjx2Y%252B7NNLciOsPoQKmxR40MiDpR8OZLp6fCLCbiwy%252FXKcZ7Opob7TiLiZkB4YoZpNolpioX%252Fr9uxHlbwLUDMleI7s5uRqKjhvzRATBUBEgu&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.salesDispatchOrderPageQuery&_sig=27e27f9d83e20805cf446ac4d1c532ba
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{
+  &#34;Server&#34;: &#34;nginx&#34;,
+  &#34;Date&#34;: &#34;Thu, 22 Oct 2020 12:24:07 GMT&#34;,
+  &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;,
+  &#34;Content-Length&#34;: &#34;571&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>body</th>
+                        <td>
+                          
+                            
+                              <pre>{
+  &#34;stat&#34;: {
+    &#34;_mt&#34;: &#34;saasmanager.service.salesDispatchOrderPageQuery&#34;,
+    &#34;_traceId&#34;: &#34;online.base.api.service-0a004c56-445380-3841&#34;,
+    &#34;cid&#34;: &#34;a:df39a7|t:120|s:1603369447494&#34;,
+    &#34;code&#34;: 0,
+    &#34;notificationList&#34;: [
+      {
+        &#34;key&#34;: &#34;output&#34;,
+        &#34;value&#34;: &#34;[351]&#34;
+      },
+      {
+        &#34;key&#34;: &#34;dubbo&#34;,
+        &#34;value&#34;: &#34;[2.0.2]&#34;
+      }
+    ],
+    &#34;session&#34;: &#34;f3dcad14-94b7-4570-a409-b42414dbca68&#34;,
+    &#34;stateList&#34;: [
+      {
+        &#34;code&#34;: 0,
+        &#34;defaultTip&#34;: &#34;成功&#34;,
+        &#34;length&#34;: 149,
+        &#34;msg&#34;: &#34;SUCCESS&#34;
+      }
+    ],
+    &#34;systime&#34;: 1603369447742
+  },
+  &#34;content&#34;: [
+    {
+      &#34;total&#34;: 0,
+      &#34;pageNo&#34;: 0,
+      &#34;salesDispatchOrderSummaryVO&#34;: {
+        &#34;notDispatchCount&#34;: 0,
+        &#34;dispatchNum&#34;: 0,
+        &#34;dispatchWeight&#34;: &#34;0&#34;,
+        &#34;finishDispatchCount&#34;: 0
+      },
+      &#34;pageSize&#34;: 0
+    }
+  ]
+}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>571</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>253.4</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>252.745</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+          <a class="button" href="#popup_attachment_1_4">traceback</a>
+          <div id="popup_attachment_1_4" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_4">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+  File &#34;c:\users\gp\appdata\local\programs\python\python38\lib\site-packages\httprunner\api.py&#34;, line 63, in test
+    test_runner.run_test(test_dict)
+httprunner.exceptions.ExtractFailure: Failed to extract! =&gt; content.0.salesDispatchOrderVOList.0.id
+response body: {&#39;stat&#39;: {&#39;_mt&#39;: &#39;saasmanager.service.salesDispatchOrderPageQuery&#39;, &#39;_traceId&#39;: &#39;online.base.api.service-0a004c56-445380-3841&#39;, &#39;cid&#39;: &#39;a:df39a7|t:120|s:1603369447494&#39;, &#39;code&#39;: 0, &#39;notificationList&#39;: [{&#39;key&#39;: &#39;output&#39;, &#39;value&#39;: &#39;[351]&#39;}, {&#39;key&#39;: &#39;dubbo&#39;, &#39;value&#39;: &#39;[2.0.2]&#39;}], &#39;session&#39;: &#39;f3dcad14-94b7-4570-a409-b42414dbca68&#39;, &#39;stateList&#39;: [{&#39;code&#39;: 0, &#39;defaultTip&#39;: &#39;成功&#39;, &#39;length&#39;: 149, &#39;msg&#39;: &#39;SUCCESS&#39;}], &#39;systime&#39;: 1603369447742}, &#39;content&#39;: [{&#39;total&#39;: 0, &#39;pageNo&#39;: 0, &#39;salesDispatchOrderSummaryVO&#39;: {&#39;notDispatchCount&#39;: 0, &#39;dispatchNum&#39;: 0, &#39;dispatchWeight&#39;: &#39;0&#39;, &#39;finishDispatchCount&#39;: 0}, &#39;pageSize&#39;: 0}]}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &#34;c:\users\gp\appdata\local\programs\python\python38\lib\site-packages\httprunner\api.py&#34;, line 65, in test
+    self.fail(str(ex))
+AssertionError: Failed to extract! =&gt; content.0.salesDispatchOrderVOList.0.id
+response body: {&#39;stat&#39;: {&#39;_mt&#39;: &#39;saasmanager.service.salesDispatchOrderPageQuery&#39;, &#39;_traceId&#39;: &#39;online.base.api.service-0a004c56-445380-3841&#39;, &#39;cid&#39;: &#39;a:df39a7|t:120|s:1603369447494&#39;, &#39;code&#39;: 0, &#39;notificationList&#39;: [{&#39;key&#39;: &#39;output&#39;, &#39;value&#39;: &#39;[351]&#39;}, {&#39;key&#39;: &#39;dubbo&#39;, &#39;value&#39;: &#39;[2.0.2]&#39;}], &#39;session&#39;: &#39;f3dcad14-94b7-4570-a409-b42414dbca68&#39;, &#39;stateList&#39;: [{&#39;code&#39;: 0, &#39;defaultTip&#39;: &#39;成功&#39;, &#39;length&#39;: 149, &#39;msg&#39;: &#39;SUCCESS&#39;}], &#39;systime&#39;: 1603369447742}, &#39;content&#39;: [{&#39;total&#39;: 0, &#39;pageNo&#39;: 0, &#39;salesDispatchOrderSummaryVO&#39;: {&#39;notDispatchCount&#39;: 0, &#39;dispatchNum&#39;: 0, &#39;dispatchWeight&#39;: &#39;0&#39;, &#39;finishDispatchCount&#39;: 0}, &#39;pageSize&#39;: 0}]}
+
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_5">
+      <th class="error" style="width:5em;">error</th>
+      <td colspan="2">销售-根据id查询待发货单的信息</td>
+      <td style="text-align:center;width:6em;">N/A ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_5_1">log-1</a>
+        <div id="popup_log_1_5_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_5_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: </h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            N/A
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            N/A
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            N/A
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>N/A</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>N/A</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+          <a class="button" href="#popup_attachment_1_5">traceback</a>
+          <div id="popup_attachment_1_5" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_5">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+httprunner.exceptions.VariableNotFound: id
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_6">
+      <th class="error" style="width:5em;">error</th>
+      <td colspan="2">销售-新增生成提货完成的订单</td>
+      <td style="text-align:center;width:6em;">N/A ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_6_1">log-1</a>
+        <div id="popup_log_1_6_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_6_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: </h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            N/A
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            N/A
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            N/A
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            None
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>N/A</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>N/A</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+          <a class="button" href="#popup_attachment_1_6">traceback</a>
+          <div id="popup_attachment_1_6" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_6">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+httprunner.exceptions.VariableNotFound: dispatchId
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>

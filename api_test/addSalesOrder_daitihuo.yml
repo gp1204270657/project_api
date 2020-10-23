@@ -6,7 +6,7 @@ variables:
   saleOrderId: 1
   salesOrderNo: 1
   expected_status_code: 200
-  token: FMRY17%2FdFKWM%2BLfNxoYSTcFw85CEqbbK5CrTEkoxVrToV4iePFhrSm84Jtg8gpigZaO82%2Bzs4UwxjATZKpvRl263uuuDhMaCNVi%2FKly%2FzUEp%2FPXczr6F1KT%2BTmlAEu2e%2B1pavBu5UIouboWSQmkH8k8rh9QfSZ6B
+  token: $token
 request:
   verify: False
   url: /web.api

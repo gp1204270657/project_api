@@ -1,31 +1,26 @@
-name: 销售-查询待提货单的信息
+name: 登录
 base_url: https://api.zhaogangtest.com
 
+
 variables:
-    id: 1
     expected_status_code: 200
-    token: $token
 request:
     verify: False
     url: /web.api
-    method: GET
+    method: POST
     params:
         _sm: md5
         _ft: json
-        _ts: 1602834101979
-        param: '{"id":"$id"}'
+        _ts: 1603442586708
+        mobile: ${ENV(mobile)}
+        password: ${ENV(password)}
         _aid: 500
-        _tk: $token
-        _uid: 800008501
+        _tk: ''
+        _uid: ''
         _tenantid: 320004630
         _domid: 2000
-        _mt: saasmanager.service.getDispatchOrderDetail
-
-setup_hooks:
-    - ${generate_sig($request)}
-
-tearDown_hooks:
-    - ${timesleep()}
+        _mt: user.wapLogin
+        _sig: 389ba02128631a7c34ac77e0a43b15ed
 
 
 validate:

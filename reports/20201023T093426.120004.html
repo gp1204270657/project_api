@@ -1,0 +1,505 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2020-10-23T09:34:26.120004</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">1.110 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.5.7 </td>
+      <td>CPython 3.8.4 </td>
+      <td colspan="2">Windows-10-10.0.18362-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (1/0)</td>
+      <td colspan="2">1 (1/0/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>销售-新增通知提货单查询明细id</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 1</td>
+      <td>SUCCESS: 1</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">销售-新增通知提货单查询明细id</td>
+      <td style="text-align:center;width:6em;">109.79 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 销售-新增通知提货单查询明细id</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1603445280645&salesOrderId=%7B%22salesOrderId%22%3A%2272420%22%7D&_aid=500&_tk=FMRY17%252FdFKULYXoB4C0r21zPOglfANgfqwX8TqFBiXGx0SH%252F8AxBpI2JHtxPBXrZLYA4Ry7nOPKlekWoewatApihSzvYNmwyCwsqCEYeZsAZH1RkzkM4XP79Q%252BPvJOxj%252FArNbHiSYNWvz%252FgeYTnW9dT7r2xd3fvd&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.getSalesOrderWarehouseItem&_sig=bebb708f29bd35d62df8bd8c20525ff2
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                            GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                            <pre>{
+  &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+  &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+  &#34;Accept&#34;: &#34;*/*&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            https://api.zhaogangtest.com/web.api?_sm=md5&_ft=json&_ts=1603445280645&salesOrderId=%7B%22salesOrderId%22%3A%2272420%22%7D&_aid=500&_tk=FMRY17%252FdFKULYXoB4C0r21zPOglfANgfqwX8TqFBiXGx0SH%252F8AxBpI2JHtxPBXrZLYA4Ry7nOPKlekWoewatApihSzvYNmwyCwsqCEYeZsAZH1RkzkM4XP79Q%252BPvJOxj%252FArNbHiSYNWvz%252FgeYTnW9dT7r2xd3fvd&_uid=800008501&_tenantid=320004630&_domid=2000&_mt=saasmanager.service.getSalesOrderWarehouseItem&_sig=bebb708f29bd35d62df8bd8c20525ff2
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            <pre>{
+  &#34;Server&#34;: &#34;nginx&#34;,
+  &#34;Date&#34;: &#34;Fri, 23 Oct 2020 09:34:27 GMT&#34;,
+  &#34;Content-Type&#34;: &#34;application/json;charset=utf-8&#34;,
+  &#34;Content-Length&#34;: &#34;1153&#34;,
+  &#34;Connection&#34;: &#34;keep-alive&#34;
+}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            application/json;charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>body</th>
+                        <td>
+                          
+                            
+                              <pre>{
+  &#34;stat&#34;: {
+    &#34;_mt&#34;: &#34;saasmanager.service.getSalesOrderWarehouseItem&#34;,
+    &#34;_traceId&#34;: &#34;online.base.api.service-0a004c56-445401-7956&#34;,
+    &#34;cid&#34;: &#34;a:df39a7|t:97|s:1603445667101&#34;,
+    &#34;code&#34;: 0,
+    &#34;notificationList&#34;: [
+      {
+        &#34;key&#34;: &#34;output&#34;,
+        &#34;value&#34;: &#34;[1053]&#34;
+      },
+      {
+        &#34;key&#34;: &#34;dubbo&#34;,
+        &#34;value&#34;: &#34;[2.0.2]&#34;
+      }
+    ],
+    &#34;session&#34;: &#34;dbebc95e-e002-468f-8618-d921a80a22ea&#34;,
+    &#34;stateList&#34;: [
+      {
+        &#34;code&#34;: 0,
+        &#34;defaultTip&#34;: &#34;成功&#34;,
+        &#34;length&#34;: 732,
+        &#34;msg&#34;: &#34;SUCCESS&#34;
+      }
+    ],
+    &#34;systime&#34;: 1603445667135
+  },
+  &#34;content&#34;: [
+    {
+      &#34;data&#34;: [
+        {
+          &#34;warehouseId&#34;: 1371,
+          &#34;deliveryDtos&#34;: [
+            {
+              &#34;salesOrderId&#34;: 72420,
+              &#34;buyNum&#34;: 1,
+              &#34;supplierId&#34;: 20402,
+              &#34;itemTitle&#34;: &#34;三级螺纹钢&#34;,
+              &#34;applyWeight&#34;: &#34;120000.00&#34;,
+              &#34;purchaseId&#34;: 78620,
+              &#34;quantityUnit&#34;: 2,
+              &#34;steelMill&#34;: &#34;鸿泰&#34;,
+              &#34;warehouseName&#34;: &#34;西部森林开发仓库&#34;,
+              &#34;packageNo&#34;: &#34;&#34;,
+              &#34;actualQuantity&#34;: 0,
+              &#34;id&#34;: 79026,
+              &#34;singleWeight&#34;: &#34;120000.00&#34;,
+              &#34;notifySum&#34;: 0,
+              &#34;salesOrderNo&#34;: &#34;XSDD20201023000159&#34;,
+              &#34;itemUnitWay&#34;: 2,
+              &#34;valuationUnit&#34;: 1,
+              &#34;supplierName&#34;: &#34;山杏往来公司&#34;,
+              &#34;batchNo&#34;: &#34;&#34;,
+              &#34;applySum&#34;: 1,
+              &#34;specification&#34;: &#34;22*12&#34;,
+              &#34;itemId&#34;: 568338,
+              &#34;taxRate&#34;: &#34;0.1300&#34;,
+              &#34;material&#34;: &#34;HRB400&#34;,
+              &#34;warehouseId&#34;: 1371,
+              &#34;notifyWeight&#34;: &#34;0&#34;,
+              &#34;buyWeight&#34;: &#34;120000.00&#34;,
+              &#34;weightActual&#34;: &#34;&#34;,
+              &#34;weightUnit&#34;: 1
+            }
+          ],
+          &#34;warehouseName&#34;: &#34;西部森林开发仓库&#34;
+        }
+      ],
+      &#34;success&#34;: true,
+      &#34;message&#34;: &#34;查询成功&#34;
+    }
+  ]
+}</pre>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+                <div style="overflow: auto">
+                
+                
+                <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>equals</td>
+                      <td>LazyString($expected_status_code)</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.stat.stateList.0.msg
+                      </td>
+                      <td>equals</td>
+                      <td>SUCCESS</td>
+                      <td>SUCCESS</td>
+                    </tr>
+                    
+                </table>
+                
+
+                
+                
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>1153</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>109.79</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>104.457</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>

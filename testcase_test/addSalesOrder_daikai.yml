@@ -4,8 +4,15 @@ config:
 
 teststeps:
 
+-   name: 登录
+    api: api_test/user_login.yml
+    extract:
+        - token: content.content.0.token
+
 -   name: 销售-新增待开销售订单
     api: api_test/addSalesOrder_daikai.yml
+    variables:
+        token: $token
     extract:
         - saleOrderId: content.content.0.saleOrderId
         - salesOrderNo: content.content.0.salesOrderNo
